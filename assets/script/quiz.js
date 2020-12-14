@@ -5,20 +5,26 @@ const scoreText = document.getElementById("score");
 const soundCorrect = new Audio("assets/sounds/yes.mp3");
 const soundIncorrect = new Audio("assets/sounds/no.mp3");
 
+
+/* 
+ *  Declare Variables
+ */
 let currentQuestion = {};
 let acceptingAnswers = false;
 let score = 0;
 let questionCounter = 0;
 let availableQuesions = [];
 
-
+/* 
+ *  Declare Questions
+ */
 let questions = [
     {
-        question: 'What Island does Father Ted live on?',
-        option1: 'Craggy',
-        option2: 'Rugged',
-        option3: 'Crabby',
-        option4: 'Ragged',
+        question: "What Island does Father Ted live on?",
+        option1: "Craggy",
+        option2: "Rugged",
+        option3: "Crabby",
+        option4: "Ragged",
         answer: 1,
     },
     {
@@ -135,71 +141,88 @@ let questions = [
     },
 ];
 
-
-//CONSTANTS
+/* 
+ *  Declare Const
+ */
 const CORRECT_BONUS = 1;
 const MAX_QUESTIONS = 15;
 
 startGame = () => {
-  questionCounter = 0;
-  score = 0;
-  availableQuesions = [...questions];
-  getNewQuestion();
+    questionCounter = 0;
+    score = 0;
+    availableQuesions = [...questions];
+    getNewQuestion();
 };
 
+
+/* 
+ *  Gets new random question from selection 
+ */
 getNewQuestion = () => {
-  if (availableQuesions.length === 0 || questionCounter >= MAX_QUESTIONS) {
-    localStorage.setItem("mostRecentScore", score);
-    //go to the end page
-    return window.location.assign("results.html");
-  }
-  questionCounter++;
-  questionCounterText.innerText = `${questionCounter}/${MAX_QUESTIONS}`;
+    if (availableQuesions.length === 0 || questionCounter >= MAX_QUESTIONS) {
+        localStorage.setItem("mostRecentScore", score);
+        //go to the end page
+        return window.location.assign("results.html");
+    }
+    questionCounter++;
+    questionCounterText.innerText = `${questionCounter}/${MAX_QUESTIONS}`;
 
-  const questionIndex = Math.floor(Math.random() * availableQuesions.length);
-  currentQuestion = availableQuesions[questionIndex];
-  question.innerText = currentQuestion.question;
+    const questionIndex = Math.floor(Math.random() * availableQuesions.length);
+    currentQuestion = availableQuesions[questionIndex];
+    question.innerText = currentQuestion.question;
 
-  options.forEach(option => {
-    const number = option.dataset["number"];
-    option.innerText = currentQuestion["option" + number];
-  });
+    options.forEach((option) => {
+        const number = option.dataset["number"];
+        option.innerText = currentQuestion["option" + number];
+    });
 
-  availableQuesions.splice(questionIndex, 1);
-  acceptingAnswers = true;
+
+    /* 
+ *  Removes used Question from next selection
+ */
+    availableQuesions.splice(questionIndex, 1);
+    acceptingAnswers = true;
 };
 
-options.forEach(option => {
-  option.addEventListener("click", e => {
-    if (!acceptingAnswers) return;
+options.forEach((option) => {
+    option.addEventListener("click", (e) => {
+        if (!acceptingAnswers) return;
 
-    acceptingAnswers = false;
-    const selectedOption = e.target;
-    const selectedAnswer = selectedOption.dataset["number"];
+        acceptingAnswers = false;
+        const selectedOption = e.target;
+        const selectedAnswer = selectedOption.dataset["number"];
+/* 
+ *  Applies class depending on result
+ */
+        const classToApply = selectedAnswer == currentQuestion.answer ? "correct" : "incorrect";
 
-    const classToApply =
-      selectedAnswer == currentQuestion.answer ? "correct" : "incorrect";
+        selectedOption.parentElement.classList.add(classToApply);
+/* 
+ *  Applies class depending on result and plays sound
+ */
+        if (classToApply === "correct") {
+            incrementScore(CORRECT_BONUS);
+            soundCorrect.play();
+        } else if (classToApply === "incorrect") {
+            soundIncorrect.play();
+        }
 
-    selectedOption.parentElement.classList.add(classToApply);
-
-     if (classToApply === "correct") {
-      incrementScore(CORRECT_BONUS);
-      soundCorrect.play();
-    }
-    else if(classToApply === "incorrect") {
-        soundIncorrect.play();
-    }
-
-    setTimeout(() => {
-      selectedOption.parentElement.classList.remove(classToApply);
-      getNewQuestion();
-    }, 1000);
-  });
+/* 
+ *  Allows time for sound to play before next answer can be pressed
+ */
+        setTimeout(() => {
+            selectedOption.parentElement.classList.remove(classToApply);
+            getNewQuestion();
+        }, 1000);
+    });
 });
 
-incrementScore = num => {
-  score += num;
-  scoreText.innerText = score;
+/* 
+ *  Adds to score
+ */
+incrementScore = (num) => {
+    score += num;
+    scoreText.innerText = score;
 };
 
 startGame();

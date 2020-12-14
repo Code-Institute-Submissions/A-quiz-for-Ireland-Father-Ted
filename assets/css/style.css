@@ -1,9 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,600;1,600&family=Fondamento:ital@0;1&family=Irish+Grover&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,600;1,600&family=Fondamento:ital@0;1&family=Irish+Grover&display=swap");
 
 body {
-  font-family: "Fondamento" , sans-serif;
-  background-image: url("../images/background-body.png");
+    font-family: "Fondamento", sans-serif;
+    background-image: url("../images/background-body.png");
 }
+
+/*---------------------------------------------------Body*/
 
 .main-body {
     position: absolute;
@@ -13,35 +15,50 @@ body {
     text-align: center;
     width: 90%;
 }
+
+.container {
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    margin: 0 auto;
+    padding: 5px;
+}
+
+/*---------------------------------------------------Titles*/
+
 .top-title {
     font-size: 30px;
     color: #02630a;
     outline-color: #bfba69;
     text-shadow: 2px 1px 1px #bfba69;
-	-webkit-text-stroke-width: .5px;
+    -webkit-text-stroke-width: 0.5px;
     -webkit-text-stroke-color: #bfba69;
 }
 
 .bottom-title {
-    font-family: "Irish Grover" , sans-serif;
+    font-family: "Irish Grover", sans-serif;
     font-size: 40px;
     outline-color: #bfba69;
     text-shadow: 2px 1px 1px #bfba69;
-	-webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-width: 1px;
     -webkit-text-stroke-color: #bfba69;
     color: #a62d37;
 }
 
 @media (min-width: 768px) {
-    .top-title{
+    .top-title {
         font-size: 40px;
     }
 }
 @media (min-width: 768px) {
-    .bottom-title{
+    .bottom-title {
         font-size: 60px;
     }
 }
+
+/*---------------------------------------------------Buttons*/
 
 .btn-play {
     font-size: 1.4rem;
@@ -50,7 +67,7 @@ body {
     text-align: center;
     border: 1px solid #bfba69;
     color: #02630a;
-    background-color: rgba(191,186,105,.7);
+    background-color: rgba(191, 186, 105, 0.7);
     box-shadow: 3px 3px 7px green;
     text-decoration: none;
 }
@@ -61,35 +78,26 @@ body {
     }
 }
 
- 
-.container {
-  width: 100vw;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 90%;
-  margin: 0 auto;
-  padding: 5px;
-}
+/*---------------------------------------------------Questions and Answers*/
 
 .options-container {
-  display: flex;
-  margin-bottom: 0.5rem;
-  width: 100%;
-  font-size: 1.8rem;
-  background-color: rgba(191,186,105,.7);
-box-shadow: 3px 3px 7px green;
-  text-align: center;
+    display: flex;
+    margin-bottom: 0.5rem;
+    width: 100%;
+    font-size: 1.8rem;
+    background-color: rgba(191, 186, 105, 0.7);
+    box-shadow: 3px 3px 7px green;
+    text-align: center;
 }
 
 .options-container:hover {
-  cursor: pointer;
+    cursor: pointer;
 }
 
 .option-text {
-  padding: 5px;
-  width: 100%;
-  color: #02630a;
+    padding: 5px;
+    width: 100%;
+    color: #02630a;
 }
 
 @media (min-width: 425px) {
@@ -103,7 +111,7 @@ box-shadow: 3px 3px 7px green;
     color: #a62d37;
     outline-color: 3px #bfba69;
     text-shadow: 2px 1px 1px #000000;
-	-webkit-text-stroke-width: .5px;
+    -webkit-text-stroke-width: 0.5px;
     -webkit-text-stroke-color: #bfba69;
 }
 
@@ -113,45 +121,50 @@ box-shadow: 3px 3px 7px green;
     }
 }
 
+/*---------------------------------------------------Classes to Apply*/
+
 .correct {
-  background-color: #28a745;
+    background-color: #28a745;
 }
 
 .incorrect {
-  background-color: #a62d37;
+    background-color: #a62d37;
 }
 
+/*---------------------------------------------------Scores*/
+
 #hud {
-  display: flex;
-  justify-content: space-between;
-  color: white;
+    display: flex;
+    justify-content: space-between;
+    color: white;
 }
 
 .hud-prefix {
-  text-align: center;
-  font-size: 2rem;
-  color: #a62d37;
+    text-align: center;
+    font-size: 2rem;
+    color: #a62d37;
     outline-color: 3px #bfba69;
     text-shadow: 2px 1px 1px #000000;
-	-webkit-text-stroke-width: .5px;
+    -webkit-text-stroke-width: 0.5px;
     -webkit-text-stroke-color: #bfba69;
 }
 
 .hud-main-text {
-  text-align: center;
-  color: #a62d37;
+    text-align: center;
+    color: #a62d37;
     outline-color: 3px #bfba69;
     text-shadow: 2px 1px 1px #000000;
-	-webkit-text-stroke-width: .5px;
+    -webkit-text-stroke-width: 0.5px;
     -webkit-text-stroke-color: #bfba69;
 }
 
-img {
-    max-width: 200px;
+#finalScore {
+    font-size: 90px;
+    font-family: "Fondamento";
     text-align: center;
-}
-
-.click-info {
-    font-size: 15px;
-    color: white;
+    border: 1px solid #bfba69;
+    color: #02630a;
+    background-color: rgba(191, 186, 105, 0.7);
+    box-shadow: 3px 3px 7px green;
+    text-decoration: none;
 }
