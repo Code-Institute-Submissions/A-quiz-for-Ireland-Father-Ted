@@ -1,15 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="assets/css/style.css">
-    <title>A Quiz for Ireland - The Father Ted Quiz</title>
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Quick Quiz - Play</title>
+    <link rel="stylesheet" href="assets/css/style.css" />
+    
+  </head>
+  <body>
     <div class="container">
       <div id="game" class="justify-center flex-column">
-        
+       
         <p id="question">What is the answer to this questions?</p>
         <div class="options-container">
           
@@ -27,20 +29,27 @@
           
           <p class="option-text" data-number="4">Option 4</p>
         </div>
-        <div id="hud">
+           <div id="hud">
           <div id="hud-item">
             <p class="hud-prefix">
               Question
             </p>
             <h1 class="hud-main-text" id="questionCounter"></h1>
           </div>
+          <div class="hud-item">
+            <p class="hud-prefix">
+              Score
+            </p>
+            <h1 class="hud-main-text" id="score">
+              0
+            </h1>
           </div>
         </div>
+        </div>
       </div>
-
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
-    <script src="assets/Script/quiz.js"></script>
-</body>
+    <script src="assets/script/quiz.js"></script>
+  </body>
 </html>

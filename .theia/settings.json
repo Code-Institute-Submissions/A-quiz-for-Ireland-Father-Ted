@@ -19,5 +19,18 @@
       "**/core.mongo*": true,
       "**/core.python*": true
    },
-   "emmet.extensionsPath": ".theia"
+"emmet.extensionsPath": ".theia",
+"cSpell.ignoreWords": [
+    "available",
+    "available quesions",
+    "boyles",
+    "byrne",
+    "dougal",
+    "eoin",
+    "funland",
+    "marys",
+    "nuala",
+    "quesions",
+    "windolene"
+]
 }
