@@ -1,4 +1,7 @@
 /*jshint esversion: 6 */
+/* 
+Quiz script is based on Build a Quiz app videos by James Q Quick youtube link below
+https://www.youtube.com/watch?v=u98ROZjBWy8&list=PLDlWc9AfQBfZIkdVaOQXi1tizJeNJipEx&index=1&ab_channel=JamesQQuick */
 
 const question = document.getElementById("question");
 const options = Array.from(document.getElementsByClassName("option-text"));
