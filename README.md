@@ -1,23 +1,28 @@
-<h1 align="center">The Father Ted Quiz</h1>
+<h1 align="center">Stephen O'Connor Photography</h1>
 
- [View the live project here.](https://stephenoc390.github.io/A-quiz-for-Ireland-Father-Ted/)
+ [View the live project here.](https://stephenoc390.github.io/SOCPhotography-Milestone1/)
 
-A Quiz for Ireland - The Father Ted Quiz is a single-player quiz game created for my second milestone project in the Interactive Frontend Development module with Code Institute.
-The website was made for single players to test their knowledge of the television series Father Ted through answering 15 questions.. 
+Stephen O’Connor Photography is a fictional photography website created for my first milestone project in the User-Centric Development module with Code Institute.
 
-<h2 align="center"><img src="assets/images/colour-scheme.png" style="margin: 0;"></h2>
+The website was created so that the fictional professional photographer can showcase his photography and also inform the user of workshops he offers with the options to enquire about availability and for more details of the workshops, view his social media accounts and a form option to contact him. All images were taken by myself in Tanzania but I am not a photographer or actually based in Tanzania.
+
+<h2 align="center"><img src="assets/readme/responsive-image.png" style="margin: 0;"></h2>
 
 ## User Experience (UX) 
 
 - ### User Stories
  -  #### First-time Visitor Goals: 
-    1. As a first time visitor, I want to be able to test my knowledge of the television show Father Ted.
-    2. As a First Time Visitor, I want to be able to easily navigate throughout the site to play the quiz.
-    3. As a First Time Visitor, I want to be able to see my progress through the quiz.
-    4. As a First Time Visitor, I want to be able to see my score.
+    1. As a first time visitor, I want to understand the main purpose of the site and learn more about what it has to offer
+    2. As a First Time Visitor, I want to be able to easily navigate throughout the site to find content.
+    3. As a First Time Visitor, I want to be able to see images taken by the photographer, learn more about the workshops on offer,  also I want to locate their social media links to see their followings on social media to determine how trusted and known they are.
 
   - #### Returning Visitor Goals: 
-    1. As a Returning Visitor, I want to be able to try and beat my previous highest score.
+    1. As a Returning Visitor, I want to find the best way to get in contact with the organisation with any questions I may have.
+    2. As a Returning Visitor, I want to find the best way to get in contact with the organisation about booking a photography workshop.
+    3. As a returning Visitor I want to find the websites social media channels.
+
+  - #### Frequent Visitor Goals 
+    1. As a Frequent User, I want to check to see if there are any newly added images.
 
 -   ### Design
     -   #### Colour Scheme
@@ -26,7 +31,7 @@ The website was made for single players to test their knowledge of the televisio
         <img src="assets/readme/colour-theme-2.png" style="margin: 0;">
     -   #### Typography
         -   The Montserrat font is the main font for content used throughout the website with Sans Serif as a fallback font if the imported fonts do not load. Montserrat is a clean a friendly font which works well to show the website is very welcoming.
-        -   The Julius Sans One font is used for all of the headings throughout the website with Sans Serif as a fallback font if the imported fonts do not load. Julius Sans One gives the look of a quite simple font and easy to read but, yet also professional to keep in mind it is a professional photographers page.
+        -   The Julius Sans One font is used for al thel headings throughout the website with Sans Serif as a fallback font if the imported fonts do not load. Julius Sans One gives the look of a quite simple font and easy to read but, yet also professional to keep in mind it is a professional photographers page.
         -   The Permanent Marker font is used for just the welcome message on the home page with Sans Serif as a fallback font if the imported fonts do not load. Permanent Marker is quite a fun font that gives the look of uniqueness as would with each owns individual hand writing with a marker, I chose this to give the instant message that these images are unique to this Photographer and it is a friendly website.
 
     -   #### Imagery
