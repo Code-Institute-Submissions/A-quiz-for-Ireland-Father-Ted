@@ -130,8 +130,28 @@ box-shadow: 3px 3px 7px green;
 .hud-prefix {
   text-align: center;
   font-size: 2rem;
+  color: #a62d37;
+    outline-color: 3px #bfba69;
+    text-shadow: 2px 1px 1px #000000;
+	-webkit-text-stroke-width: .5px;
+    -webkit-text-stroke-color: #bfba69;
 }
 
 .hud-main-text {
   text-align: center;
+  color: #a62d37;
+    outline-color: 3px #bfba69;
+    text-shadow: 2px 1px 1px #000000;
+	-webkit-text-stroke-width: .5px;
+    -webkit-text-stroke-color: #bfba69;
+}
+
+img {
+    max-width: 200px;
+    text-align: center;
+}
+
+.click-info {
+    font-size: 15px;
+    color: white;
 }

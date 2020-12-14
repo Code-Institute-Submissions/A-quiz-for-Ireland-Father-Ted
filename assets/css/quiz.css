@@ -4,7 +4,7 @@
   margin-bottom: 0.5rem;
   width: 100%;
   font-size: 1.8rem;
-  border: 0.1rem solid rgb(86, 165, 235, 0.25);
+
   background-color: white;
   text-align: center;
 }
@@ -18,7 +18,6 @@
 
 .choice-prefix {
   padding: 1.5rem 2.5rem;
-  background-color: #56a5eb;
   color: white;
 }
 
@@ -32,10 +31,6 @@
 }
 
 .incorrect {
-  background-color: #dc3545;
-}
-
-.incorrect {
   background-color: #a62d37;
 }
 /* HUD */
@@ -43,13 +38,33 @@
 #hud {
   display: flex;
   justify-content: space-between;
+  
 }
 
 .hud-prefix {
   text-align: center;
   font-size: 2rem;
+ 
+    color: #a62d37;
+    outline-color: 3px #bfba69;
+    text-shadow: 2px 1px 1px #000000;
+	-webkit-text-stroke-width: .5px;
+    -webkit-text-stroke-color: #bfba69;
 }
 
 .hud-main-text {
   text-align: center;
 }
+
+#finalScore {
+    font-size: 90px;
+    font-family: "Fondamento";
+   
+    text-align: center;
+    border: 1px solid #bfba69;
+    color: #02630a;
+    background-color: rgba(191,186,105,.7);
+    box-shadow: 3px 3px 7px green;
+    text-decoration: none;
+}
+
