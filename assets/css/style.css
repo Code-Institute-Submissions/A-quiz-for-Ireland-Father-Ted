@@ -6,7 +6,7 @@ body {
 }
 
 /*---------------------------------------------------Body*/
-
+  
 .main-body {
     position: absolute;
     top: 30%;
@@ -109,7 +109,6 @@ body {
 #question {
     font-size: 30px;
     color: #a62d37;
-    outline-color: 3px #bfba69;
     text-shadow: 2px 1px 1px #000000;
     -webkit-text-stroke-width: 0.5px;
     -webkit-text-stroke-color: #bfba69;
@@ -143,7 +142,6 @@ body {
     text-align: center;
     font-size: 2rem;
     color: #a62d37;
-    outline-color: 3px #bfba69;
     text-shadow: 2px 1px 1px #000000;
     -webkit-text-stroke-width: 0.5px;
     -webkit-text-stroke-color: #bfba69;
@@ -152,7 +150,6 @@ body {
 .hud-main-text {
     text-align: center;
     color: #a62d37;
-    outline-color: 3px #bfba69;
     text-shadow: 2px 1px 1px #000000;
     -webkit-text-stroke-width: 0.5px;
     -webkit-text-stroke-color: #bfba69;

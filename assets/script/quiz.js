@@ -1,3 +1,5 @@
+/*jshint esversion: 6 */
+
 const question = document.getElementById("question");
 const options = Array.from(document.getElementsByClassName("option-text"));
 const questionCounterText = document.getElementById("questionCounter");
